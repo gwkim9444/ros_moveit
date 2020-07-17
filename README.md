@@ -1,6 +1,5 @@
-# ros_moveit
-ROS Moveit에 대한 공부 정리
-
+# ROS Moveit python lib 해석 
+---
 ```python
 class MoveGroupCommander(object):
     """
@@ -8,23 +7,23 @@ class MoveGroupCommander(object):
     """
 
     def __init__(self, name, robot_description="robot_description", ns=""):
-        """ Specify the group name for which to construct this commander instance. Throws an exception if there is an initialization error. """
+        """ 그룹이름에 대한 선언 및 초기화 오류 있을경우 예외처리 수행 """
         self._g = _moveit_move_group_interface.MoveGroupInterface(name, robot_description, ns)
 
     def get_name(self):
-        """ Get the name of the group this instance was initialized for """
+        """ 선언한 인스턴스의 이름을 가져옴 """
         return self._g.get_name()
 
     def stop(self):
-        """ Stop the current execution, if any """
+        """ 모션 수행중인 인스턴스를 멈춤 """
         self._g.stop()
 
     def get_active_joints(self):
-        """ Get the active joints of this group """
+        """ 그룹(로봇)의 활성화된 조인트(관절)를 가져옴"""
         return self._g.get_active_joints()
 
     def get_joints(self):
-        """ Get the joints of this group """
+        """ 그룹의 전체 조인트(관절)을 가져옴 """
         return self._g.get_joints()
 
     def get_variable_count(self):
