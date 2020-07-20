@@ -19,6 +19,9 @@ Python Moveit! 라이브러리는 크게 3개의 Class로 나누어 움직임이
 6.엔드 이펙터(그리퍼) 위치에 상자가 나타납니다.  
 7.기타 물건 및 자재에 대한 특수효과 부여.  
 
+
+### MoveGroupCommander class
+---
 ```python
 class MoveGroupCommander(object):
     """
