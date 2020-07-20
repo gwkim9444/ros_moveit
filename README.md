@@ -1,5 +1,24 @@
 # ROS Moveit python lib 해석 
 ---
+Python Moveit! 라이브러리는 크게 3개의 Class로 나누어 움직임이 필요한 로봇의 모션을 수행한다.
+
+1.MoveGroupCommander class
+ - 로봇의 Motion을 Plan 및 Exectue 하는데 사용
+2.PlanningSceneInterface class
+ - 주변 환경에 대한 로봇의 내부 이해도를 얻고 설정하고 업데이트하기 위한 원격 인터페이스
+3.RobotCommander class
+ - 로봇의 kinematic 모델 및 로봇의 Current Joint State 같은 정보를 제공합니다
+ 
+각 Class의 내장된 함수로 우리는 로봇을 활용해 해당 기능을 수행해 볼 수 있다.
+
+1.로봇관절의 계획과 움직임을 수행.
+2.로봇의 목표 위치에 대한 경로를 계획.
+3.로봇의 직교 경로를 계획.
+4.로봇의 직교 경로 계획을 다시 표시.
+5.로봇의 직교 경로 계획을 실행.
+6.엔드 이펙터(그리퍼) 위치에 상자가 나타납니다.
+7.기타 물건 및 자재에 대한 특수효과 부여.
+
 ```python
 class MoveGroupCommander(object):
     """
