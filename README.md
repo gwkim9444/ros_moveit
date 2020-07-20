@@ -2,11 +2,11 @@
 ---
 Python Moveit! 라이브러리는 크게 3개의 Class로 나누어 움직임이 필요한 로봇의 모션을 수행한다.
 
-__1.MoveGroupCommander class__  
+__1. MoveGroupCommander class__  
  : 로봇의 Motion을 Plan 및 Exectue 하는데 사용  
-__2.PlanningSceneInterface class__  
+__2. PlanningSceneInterface class__  
  : 주변 환경에 대한 로봇의 내부 이해도를 얻고 설정하고 업데이트하기 위한 원격 인터페이스  
-__3.RobotCommander class__   
+__3. RobotCommander class__   
  : 로봇의 kinematic 모델 및 로봇의 Current Joint State 같은 정보를 제공합니다  
  
 각 Class의 내장된 함수로 우리는 로봇을 활용해 해당 기능을 수행해 볼 수 있다.
